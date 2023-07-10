@@ -1,1 +1,1 @@
-# sndv-frontend
+# SNDV frontend

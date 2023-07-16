@@ -6,13 +6,12 @@ const ContainedBase = styled(ButtonBase)`
   color: ${({ theme }) => theme.colors.high.main};
 `;
 
-const ContainedButton = ({ onClick, children }: Props) => (
-  <ContainedBase onClick={onClick}>{children}</ContainedBase>
+const ContainedButton = ({ children, ...props }: Props) => (
+  <ContainedBase {...props}>{children}</ContainedBase>
 );
 
-type Props = {
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: string;
-  onClick: () => void;
 };
 
 export default ContainedButton;

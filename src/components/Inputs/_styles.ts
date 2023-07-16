@@ -4,7 +4,7 @@ export const InputBase = styled.input`
   width: 100%;
   height: 45px;
   padding: ${({ theme }) => theme.spacing(2)};
-  border: solid 1px ${({ theme }) => theme.colors.high.light};
+  border: solid 1px ${({ theme }) => theme.colors.high.medium};
   box-sizing: border-box;
   border-radius: ${({ theme }) => theme.spacing(1)};
 
@@ -29,7 +29,6 @@ export const RelativeBox = styled.div`
 `;
 
 export const IconBox = styled.div`
-  /* border: solid 1px #000; */
   position: absolute;
   top: 0;
   right: 0;

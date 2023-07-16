@@ -10,7 +10,8 @@ const theme = {
     },
     high: {
       main: '#FFFFFF',
-      light: '#DFE0DF',
+      light: '#F8F8F8',
+      medium: '#DFE0DF',
     },
     low: {
       main: '#000000',

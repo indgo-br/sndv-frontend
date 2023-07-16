@@ -14,7 +14,7 @@ const IconBase = styled(ButtonBase)<IconBaseProps>`
   background-color: ${(props) =>
     props.type === 'contained'
       ? props.theme.colors.primary.main
-      : props.theme.colors.high.light};
+      : props.theme.colors.high.medium};
 `;
 
 const IconButton = ({ type = 'contained', onClick, children }: Props) => (

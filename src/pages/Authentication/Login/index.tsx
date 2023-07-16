@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import TextInput from '@/components/Inputs/Text';
 import PasswordInput from '@/components/Inputs/Password';
 import ContainedButton from '@/components/Buttons/Contained';
 import LinkButton from '@/components/Buttons/Link';
+
 import {
   Body,
   WhiteBox,
@@ -12,26 +14,32 @@ import {
   SignUpLabel,
 } from './styles';
 
-const Login = () => (
-  <Body>
-    <WhiteBox>
-      <Logo />
+const Login = () => {
+  const navigate = useNavigate();
 
-      <Title>Bem-vindo(a)!</Title>
+  return (
+    <Body>
+      <WhiteBox>
+        <Logo />
 
-      <TextInput label="E-mail" placeholder="email@exemplo.com" />
-      <PasswordInput label="Senha" />
+        <Title>Bem-vindo(a)!</Title>
 
-      <ContainedButton onClick={() => {}}>Entrar</ContainedButton>
+        <TextInput label="E-mail" placeholder="email@exemplo.com" />
+        <PasswordInput label="Senha" />
 
-      <SignUpLabel>
-        Não possui conta?{' '}
-        <LinkButton onClick={() => {}}>Cadastre-se!</LinkButton>
-      </SignUpLabel>
-    </WhiteBox>
-    <LeftIcon />
-    <RightIcon />
-  </Body>
-);
+        <ContainedButton>Entrar</ContainedButton>
+
+        <SignUpLabel>
+          Não possui conta?{' '}
+          <LinkButton onClick={() => navigate('/cadastrar')}>
+            Cadastre-se!
+          </LinkButton>
+        </SignUpLabel>
+      </WhiteBox>
+      <LeftIcon />
+      <RightIcon />
+    </Body>
+  );
+};
 
 export default Login;
